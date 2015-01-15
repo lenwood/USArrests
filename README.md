@@ -1,2 +1,2 @@
 # USArrests
-Coursera Developing Data Products Project
+Created for the Coursera [Developing Data Products](https://www.coursera.org/course/devdataprod) Project
