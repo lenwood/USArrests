@@ -6,9 +6,10 @@ shinyUI(navbarPage(
   tabPanel("Chart",
            sidebarPanel(
              p("Create a map of 1973 crime arrests by state."),
-             p("Code available in my ", a("Github Repository", href="https://github.com/lenwood/USArrests")),
+             p("Code available in my ", a("Github Repository", href="https://github.com/lenwood/USArrests"), "."),
              selectInput("Crime", "Select a crime:",
-                         choices = c("Assault", "Rape", "Murder"))),
+                         choices = c("Assault", "Rape", "Murder")),
+             p("Created by Chris Leonard. Jan 16, 2015.")),
            mainPanel(h4(textOutput("header")),
              p(uiOutput("avg")),
              p(uiOutput("sd")),
