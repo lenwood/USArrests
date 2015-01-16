@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Violent Crime Rates</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Violent Crime Rates">
+  <meta name="author" content="Chris Leonard">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Violent Crime Rates</h1>
+    <h2>Maps of 1973 violent crime arrests by state</h2>
+    <p>Chris Leonard<br/>January 16, 2015</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+em {font-style: italic}
+</style>
+
+<h3>Introduction</h3>
+
+<p>With data from the <em>1975 World Almanac</em> and <em>Statistical Abstracts of the United States</em>, the <a href="http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/USArrests.html">USArrests</a> data set within the R <a href="http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html">datasets</a> package brings together 1973 data on Assault, Rape &amp; Murder arrests by state.<br /><br /></p>
+
+<p>Using RStudio&#39;s <a href="http://shiny.rstudio.com/">Shiny</a> package, I have created an interactive chart to view this data by state.<br /><br /></p>
+
+<p>I chose this data set for the challenge of creating a choropleth, and because the data is easily accessible to R (this package is included in a standard R installation).</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h3>App Instructions</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>I have created an interactive chart which dynamically updates based on the crime chosen. The chart displays which states have the highest per capita number of arrests for a given crime.<br /><br /></p>
+
+<p>The app will also calculate the average and standard deviation of the distribution that you select.<br /><br /></p>
+
+<p>To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection.<br /><br /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h3>Urban Population Histogram</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>The USArrests data set contains one variable which I chose not to include in the app because it is different than the other data types. I&#39;ll include it here.</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h3>Conclusion</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>My app is located at <a href="https://lenwood.shinyapps.io/USArrests/">lenwood.shinyapps.io/USArrests</a>.</p>
+
+<p>The code for this presentation &amp; my shiny app is visible at my <a href="https://github.com/lenwood/USArrests">Github Repository</a>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='App Instructions'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Urban Population Histogram'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
