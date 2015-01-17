@@ -1,2 +1,2 @@
 # USArrests Shiny App
-This will be viewable on shinyapps.io soon enough.
+This code is viewable as a web app at [shinyapps.io](https://lenwood.shinyapps.io/USArrests/).
