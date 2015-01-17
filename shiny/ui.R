@@ -6,14 +6,14 @@ shinyUI(navbarPage(
   tabPanel("Chart",
            sidebarPanel(
              p("Create a map of 1973 crime arrests by state."),
-             p("Code available in my ", a("Github Repository", href="https://github.com/lenwood/USArrests"), "."),
+             p("To use this app, choose a crime in the dropdown below, and the chart will update."),
              selectInput("Crime", "Select a crime:",
                          choices = c("Assault", "Rape", "Murder")),
              p("Created by Chris Leonard. Jan 16, 2015.")),
            mainPanel(h4(textOutput("header")),
              p(uiOutput("avg")),
              p(uiOutput("sd")),
-             p("Hover over a state to see the number of arrests."),
+             p("Hover over a state to see the number of arrests. The horizontal bar below the chart shows the max & min values."),
              htmlOutput("gvis"))
            ),
   tabPanel("Data Table", dataTableOutput("USArrests")),
@@ -28,7 +28,8 @@ shinyUI(navbarPage(
                        <li><strong>UrbanPop</strong> - percentage of uban population. <em>Not used.</em></li>
                        <li><strong>Murder</strong> - number of Murder arrests per 100,000 people.</li></ul>"),
                   p("The source for crime data is the World Almanac and Book of facts 1975."),
-                  p("The source for the urban rates is Statistical Abstracts of the United States 1975.")
+                  p("The source for the urban rates is Statistical Abstracts of the United States 1975."),
+                  p("This code available in my ", a("Github Repository", href="https://github.com/lenwood/USArrests"), ". My Slidify deck is availabe at ", a("RPubs", href="http://rpubs.com/lenwood/USArrests"), ".")
                   )
                 )
              )
