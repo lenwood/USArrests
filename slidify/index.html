@@ -61,6 +61,8 @@ strong {font-weight: bold}
 <li><strong>Murder</strong> - number of Murder arrests per 100,000 people.</li>
 </ul>
 
+<p>I chose this data set for the challenge of creating a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth</a>, and because the data is easily accessible to R (this package is included in a standard R installation).</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -70,17 +72,15 @@ strong {font-weight: bold}
     <h3>App Instructions</h3>
   </hgroup>
   <article data-timings="">
-    <p>Using RStudio&#39;s <a href="http://shiny.rstudio.com/">Shiny</a> package, I have created an interactive chart to view this data by state.<br /><br /></p>
-
-<p>I chose this data set for the challenge of creating a choropleth, and because the data is easily accessible to R (this package is included in a standard R installation).</p>
-
-<p>I have created an interactive page which does 3 things:</p>
+    <p>Using RStudio&#39;s <a href="http://shiny.rstudio.com/">Shiny</a> package, I have created an interactive chart to view this data by state. My app does 3 things:</p>
 
 <ol>
 <li>US map updates with data on the selected crime.</li>
 <li>Calculates the average &amp; standard deviation of the data presented.</li>
 <li>Provides an interactive table to easily view the data.</li>
 </ol>
+
+<p>To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection. The chosen crime&#39;s average &amp; standard deviation will be displayed, and you can hover over a state to see the number of arrests. Navigate through the tabs at the top to view the data.<br /><br /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -91,7 +91,7 @@ strong {font-weight: bold}
     <h3>Urban Population Histogram</h3>
   </hgroup>
   <article data-timings="">
-    <p>The USArrests data set contains one variable which I chose not to include. I&#39;ll include it here.</p>
+    <p>Here I&#39;ll create a histogram of the Urban Population data within USArrests.</p>
 
 <pre><code class="r">data(USArrests); urbanPop &lt;- USArrests$UrbanPop
 hist(urbanPop, xlab=&quot;Urban Population Percentage&quot;, freq=FALSE, 
@@ -111,9 +111,9 @@ curve(dnorm(x, mean=mean(urbanPop), sd=sd(urbanPop)), add=TRUE,
     <h3>Conclusion</h3>
   </hgroup>
   <article data-timings="">
-    <p>My app is located at <a href="https://lenwood.shinyapps.io/USArrests/">lenwood.shinyapps.io/USArrests</a>.<br /><br /></p>
+    <p>This presentation and the app were created for the <a href="https://www.coursera.org/course/devdataprod">Developing Data Products</a> course project.<br /><br /></p>
 
-<p>To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection.<br /><br /></p>
+<p>My app is located at <a href="https://lenwood.shinyapps.io/USArrests/">lenwood.shinyapps.io/USArrests</a>.<br /><br /></p>
 
 <p>The code for this presentation &amp; my shiny app is visible at my <a href="https://github.com/lenwood/USArrests">Github Repository</a>.</p>
 

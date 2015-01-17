@@ -25,24 +25,24 @@ The USArrests data set is a data frame with 4 variables for each state:
  - **UrbanPop** - percentage of urban population.
  - **Murder** - number of Murder arrests per 100,000 people.
 
+I chose this data set for the challenge of creating a [choropleth](https://en.wikipedia.org/wiki/Choropleth_map), and because the data is easily accessible to R (this package is included in a standard R installation).
+
 --- .class #id 
 
 ### App Instructions
 
-Using RStudio's [Shiny](http://shiny.rstudio.com/) package, I have created an interactive chart to view this data by state.<br /><br />
-
-I chose this data set for the challenge of creating a choropleth, and because the data is easily accessible to R (this package is included in a standard R installation).
-
-I have created an interactive page which does 3 things:
+Using RStudio's [Shiny](http://shiny.rstudio.com/) package, I have created an interactive chart to view this data by state. My app does 3 things:
   1. US map updates with data on the selected crime.
   2. Calculates the average & standard deviation of the data presented.
   3. Provides an interactive table to easily view the data.
+
+To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection. The chosen crime's average & standard deviation will be displayed, and you can hover over a state to see the number of arrests. Navigate through the tabs at the top to view the data.<br /><br />
 
 --- .class #id
 
 ### Urban Population Histogram
 
-The USArrests data set contains one variable which I chose not to include. I'll include it here.
+Here I'll create a histogram of the Urban Population data within USArrests.
 
 
 ```r
@@ -59,9 +59,9 @@ curve(dnorm(x, mean=mean(urbanPop), sd=sd(urbanPop)), add=TRUE,
 
 ### Conclusion
 
-My app is located at [lenwood.shinyapps.io/USArrests](https://lenwood.shinyapps.io/USArrests/).<br /><br />
+This presentation and the app were created for the [Developing Data Products](https://www.coursera.org/course/devdataprod) course project.<br /><br />
 
-To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection.<br /><br />
+My app is located at [lenwood.shinyapps.io/USArrests](https://lenwood.shinyapps.io/USArrests/).<br /><br />
 
 The code for this presentation & my shiny app is visible at my [Github Repository](https://github.com/lenwood/USArrests).
 
