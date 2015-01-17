@@ -12,31 +12,46 @@ knit        : slidify::knit2slides
 ---
 <style>
 em {font-style: italic}
+strong {font-weight: bold}
 </style>
 
 ### Introduction
 
 With data from the *1975 World Almanac* and *Statistical Abstracts of the United States*, the [USArrests](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/USArrests.html) data set within the R [datasets](http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html) package brings together 1973 data on Assault, Rape & Murder arrests by state.<br /><br />
 
-Using RStudio's [Shiny](http://shiny.rstudio.com/) package, I have created an interactive chart to view this data by state.<br /><br />
-
-I chose this data set for the challenge of creating a choropleth, and because the data is easily accessible to R (this package is included in a standard R installation).
+The USArrests data set is a data frame with 4 variables for each state:
+ - **Assault** - number of Assault arrests per 100,000 people.
+ - **Rape** - number of Rape arrests per 100,000 people.
+ - **UrbanPop** - percentage of urban population.
+ - **Murder** - number of Murder arrests per 100,000 people.
 
 --- .class #id 
 
 ### App Instructions
 
-I have created an interactive chart which dynamically updates based on the crime chosen. The chart displays which states have the highest per capita number of arrests for a given crime.<br /><br />
+Using RStudio's [Shiny](http://shiny.rstudio.com/) package, I have created an interactive chart to view this data by state.<br /><br />
 
-The app will also calculate the average and standard deviation of the distribution that you select.<br /><br />
+I chose this data set for the challenge of creating a choropleth, and because the data is easily accessible to R (this package is included in a standard R installation).
 
-To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection.<br /><br />
+I have created an interactive page which does 3 things:
+  1. US map updates with data on the selected crime.
+  2. Calculates the average & standard deviation of the data presented.
+  3. Provides an interactive table to easily view the data.
 
 --- .class #id
 
 ### Urban Population Histogram
 
-The USArrests data set contains one variable which I chose not to include in the app because it is different than the other data types. I'll include it here.
+The USArrests data set contains one variable which I chose not to include. I'll include it here.
+
+
+```r
+data(USArrests); urbanPop <- USArrests$UrbanPop
+hist(urbanPop, xlab="Urban Population Percentage", freq=FALSE, 
+     col="lightgreen", xlim=c(15, 115), ylim=c(0, 0.03))
+curve(dnorm(x, mean=mean(urbanPop), sd=sd(urbanPop)), add=TRUE, 
+      col="darkblue", lwd=2)
+```
 
 <img src="assets/fig/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
@@ -44,7 +59,9 @@ The USArrests data set contains one variable which I chose not to include in the
 
 ### Conclusion
 
-My app is located at [lenwood.shinyapps.io/USArrests](https://lenwood.shinyapps.io/USArrests/).
+My app is located at [lenwood.shinyapps.io/USArrests](https://lenwood.shinyapps.io/USArrests/).<br /><br />
+
+To use the web app, select a given crime from the dropdown widget. The chart will automatically update based on your selection.<br /><br />
 
 The code for this presentation & my shiny app is visible at my [Github Repository](https://github.com/lenwood/USArrests).
 
